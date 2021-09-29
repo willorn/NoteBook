@@ -1,0 +1,61 @@
+SpringMVC：
+	是什么：一种Java框架，简化开发，使得开发的流程规范化，解耦化
+	能干什么：组件管理（三大：处理映射器，处理适配器，视图解析器）
+	怎么下载：自己写，只是一种规范
+	怎么玩：
+		1.SpringMVC处理流程（1.用户发送http请求；2.传到DispatcherServlet中；3.通过处理映射器找到对应的class类；4.再经过处理适配器判断是否有controller标示，处理http文本转化为Java数据；5.适配器进行工作；6.返回MAV对象给视图解析器；7.视图解析器解析结果为html或者是Jsp文件；8.将结果返回给用户浏览器）
+		2.一个核心控制器，三个组件。
+		3.过滤器
+		4.REST风格url
+		5.导包，各个组件的包都要进行导入
+
+1）映射器HandlerMapping：
+	是什么？springmvc.xml的一项配置
+	能干什么？根据配置找到请求路径
+	怎么玩？
+		1.通过property把mappings（指定的类）注入（发现）
+		2.注解方式
+
+2）适配器HandlerAdapter：
+	是什么？处理请求的核心区域
+	能干什么？找对应的具有Controller标示的类；bean对象
+
+3）视图解析器：
+	是什么？解析器
+	能干什么？解析ModelAndView对象 => html、jsp
+
+
+参数绑定：
+	是什么？是将web端传送的值交给Controller的过程
+	能干什么？让后端获取前端的数据
+	怎么玩？
+		1.HttpServletRequest、HttpServletResponse、HttpSession、Model
+		2.继承Converter重写convert方法
+		3.将convert以bean的方式注入到spring容器中
+		4.参数通过注解设置@RequestParam:value,required,defaultvalue
+		5.方法返回值：void、MAV、forward转发、redirect重定向
+
+数据回显：⻚⾯上数据回显本质上就是获取reqeust域的值
+
+统一的异常类：
+	是什么？一个继承了HandlerExceptionResolver，处理异常解析器的超大解析器
+	能干什么？包揽下mapper层，service层，Handler（Controller）层上的所有异常。方法有异常统一向上传递统一处理。
+	怎么玩？
+		1.创建一个统一的返回对象，可以知道整个程序的运行状态。
+		2.再加上这个，统一化整个后端的框架
+
+拦截器：
+	是什么？是请求拦截器，位于web.xml定义
+	能干什么？能处理浏览器非法请求
+	怎么下载？自己写
+	怎么玩？
+		1.springmvc中的拦截器是通过HandlerMapping发起
+		2.设置静态资源不需要经过过滤器
+
+RESTful请求
+	是什么？简化请求格式，美观
+	能干什么？使得后台处理逻辑更加清晰
+	怎么玩？
+		1.请求映射注解：@RequestMapping("/viewItems/{id}")把参数包起来
+		2.PUT POST GET DELETE
+		3.返回结果是JSON格式

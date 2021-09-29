@@ -1,0 +1,35 @@
+Tomcat：
+	是什么：是装载servlet的web服务容器
+	能干什么：给用户提供服务，通过连接器找到对应的主机进行连接处理业务
+	怎么下载：阿帕奇
+	怎么玩？
+		1.设置tomcat默认port端口
+		2.设置编码，默认ISO编码
+		3.WEBINF目录下的web.xml 
+
+servlet：
+	是什么？是请求处理器
+	能干什么？能处理浏览器请求，经过处理返回response给浏览器
+	怎么下载？自己写
+	怎么玩？
+		1.编码集
+		2.头文件的编写，request(请求行，消息头)，response(状态码，消息头，内容)
+		3.cookie和session的区别，安全性
+		4.Httpservlet对象重写doPost方法，获取对象request的属性，response返回方式。
+		5.生命周期
+
+Request和response
+	是什么？是servlet中的对象，是方法传进来的HttpServlet对象
+	能干什么？保存请求和响应的信息
+	怎么玩？
+		1.转发，重定向：response.RequestDispatcher
+		2.转发时序图
+		3.request(请求行，消息头)，response(状态码，消息头，内容)
+
+cookie和session
+	是什么？是一种会话技术
+	能干什么？保留登录信息
+	怎么下载？自己写
+	怎么玩？
+		1.常用API
+		2.安全性，存储位置，有效期区别，跨域名
