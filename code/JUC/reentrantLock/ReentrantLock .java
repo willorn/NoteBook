@@ -315,16 +315,13 @@ public class ReentrantLock implements Lock, java.io.Serializable {
             //false 表示失败，需要执行出队的逻辑... （回头讲 响应中断的lock方法时再讲。）
             boolean failed = true;
             try {
-                //当前线程是否被中断
+                //当前线程是否被中断 = 标记等待过程中是否中断过
                 boolean interrupted = false;
-                //自旋..
+                //自旋..要么获取锁，要么中断
                 for (;;) {
-
-
                     //什么时候会执行这里？
                     //1.进入for循环时 在线程尚未park前会执行
                     //2.线程park之后 被唤醒后，也会执行这里...
-
 
                     //获取当前节点的前置节点..
                     final Node p = node.predecessor();
@@ -502,6 +499,7 @@ public class ReentrantLock implements Lock, java.io.Serializable {
             //条件成立：说明当前线程就是独占锁线程..
             else if (current == getExclusiveOwnerThread()) {
                 //锁重入的逻辑..
+
 
                 //nextc 更新值..
                 int nextc = c + acquires;
