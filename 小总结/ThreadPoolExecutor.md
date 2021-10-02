@@ -1,5 +1,6 @@
 
-线程池 ThreadPoolExecutor
+**线程池 ThreadPoolExecutor**
+
 - 是什么：worker们的血汗工厂
 - 有什么用：减少资源消耗，方便管理线程
 - 怎么玩：自己new线程池玩
@@ -135,8 +136,8 @@ worker启动
 >
 > 一般都是正常拿到任务，有几种情况拿不到想要的结果（null）
 
-```java
-返回null的几种情况：（State、workerCount）
+```text
+返回 null的几种情况：（State、workerCount）
     1、rs >= STOP 
     2、shutdown且workerQueue为空
     3、wc > max

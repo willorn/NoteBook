@@ -7,6 +7,8 @@ Tomcat：
 		2.设置编码，默认ISO编码
 		3.WEBINF目录下的web.xml 
 
+
+
 servlet：
 	是什么？是请求处理器
 	能干什么？能处理浏览器请求，经过处理返回response给浏览器
@@ -18,6 +20,8 @@ servlet：
 		4.Httpservlet对象重写doPost方法，获取对象request的属性，response返回方式。
 		5.生命周期
 
+
+
 Request和response
 	是什么？是servlet中的对象，是方法传进来的HttpServlet对象
 	能干什么？保存请求和响应的信息
@@ -25,6 +29,8 @@ Request和response
 		1.转发，重定向：response.RequestDispatcher
 		2.转发时序图
 		3.request(请求行，消息头)，response(状态码，消息头，内容)
+
+
 
 cookie和session
 	是什么？是一种会话技术
