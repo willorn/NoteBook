@@ -55,7 +55,6 @@ public class MiniReentrantLock implements Lock{
         }
     }
 
-
     /**
      * 获取锁
      * 假设当前锁被占用，则会阻塞调用者线程,直到抢占到锁为止

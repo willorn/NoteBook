@@ -267,7 +267,6 @@ public class ReentrantLock implements Lock, java.io.Serializable {
                 LockSupport.unpark(s.thread);
         }
 
-
         //Sync#tryRelease()
         protected final boolean tryRelease(int releases) {
             //减去释放的值..
