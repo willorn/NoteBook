@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="demo.css">
+    <title>CSS Demo</title>
+</head>
+<body>
+<p>普通段落 (权重: 0,0,0,1)</p>
+
+<p class="text">类选择器 (权重: 0,0,1,1)</p>
+
+<p id="unique3">ID选择器 (权重: 0,1,0,1)</p>
+
+<p class="text highlight">多类选择器 (权重: 0,0,2,1)</p>
+
+<p id="unique4" class="text">ID+类选择器 (权重: 0,1,1,1)</p>
+
+<div class="text">
+    <p>后代选择器 (权重: 0,0,1,2)</p>
+</div>
+
+<p class="text" style="color: yellow">内联样式 (权重: 1,0,0,0)</p>
+
+<div class="title1">
+    <p>这里我来比较一下，先选中 id 再选中 class 的是权重是怎么分配的</p>
+</div>
+<p id="unique1" class="text">无空格：选择同一元素 #unique.text {
+    color: orange;
+    } </p>
+
+<div id="unique2">
+    <p class="text">有空格：选择后代元素 #unique .text {
+        color: blue;
+        } </p>
+</div>
+
+
+</body>
+</html>

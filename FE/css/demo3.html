@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>父子选择器示例</title>
+
+    <style>
+        div {
+            color: green;
+        }
+
+        div.demo {
+            color: blue;
+        }
+
+        .demo + p {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div>green</div>
+<div class="demo">blue</div>
+<p class="demo">yellow</p>
+
+
+<div class="parent">
+    <span>直接子元素 1</span>
+    <div>
+        <span>孙元素</span>
+    </div>
+    <span>直接子元素 2</span>
+</div>
+
+<div class="box">盒子</div>
+<p>相邻的段落 ———> blue</p>
+</body>
+</html>

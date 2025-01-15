@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>父子选择器示例</title>
+    <style>
+        /* 直接子元素选择器 (>) */
+        .parent > span {
+            color: red;
+        }
+
+        /* 后代选择器 (空格) */
+        .parent span {
+            font-weight: bold;
+        }
+
+        /* 相邻兄弟选择器 (+) */
+        .box + p {
+            color: blue;
+        }
+
+        /* 通用兄弟选择器 (~) */
+        .box ~ span {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <span>直接子元素 1</span>
+        <div>
+            <span>孙元素</span>
+        </div>
+        <span>直接子元素 2</span>
+    </div>
+
+    <div class="box">盒子</div>
+    <p>相邻的段落 ———> blue</p> 
+    <span>兄弟元素 1</span>
+    <div>其他元素</div>
+    <span>兄弟元素 2</span>
+    <span>兄弟元素 2</span>
+    <span>兄弟元素 2</span>
+    <span>兄弟元素 2</span>
+    <span>兄弟元素 2</span>
+
+
+    
+</body>
+</html>

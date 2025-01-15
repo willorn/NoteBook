@@ -1,0 +1,46 @@
+/* 权重 1,0,0,0 - 最高 infinity*/
+p[style] {
+    color: brown !important;
+}
+
+/* 权重 0,1,1,1 - ID选择器+类选择器 */
+#unique.text {
+    color: orange;
+}
+
+/* 权重 0,1,1,1 - ID选择器+后代类选择器 */
+#unique .text {
+    color: blue;
+    background-color: rgb(32, 34, 28);
+}
+
+/* 权重 0,1,0,1 - ID选择器 */
+#unique {
+    color: green;
+}
+
+/* 权重 0,0,2,1 - 两个类选择器 */
+.text.highlight {
+    color: purple;
+}
+
+/* 权重 0,0,1,2 - 类选择器+后代标签选择器 */
+.text p {
+    color: pink;
+}
+
+/* 权重 0,0,1,1 - 单个类选择器 */
+.text {
+    color: red;
+}
+
+.title1 {
+    color: red;
+    background-color: rgb(181, 94, 94);
+}
+
+/* 权重 0,0,0,1 - 最低 */
+p {
+    color: blue;
+}
+
