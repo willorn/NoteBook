@@ -25,7 +25,7 @@ a {
     height: 30px;
     line-height: 30px;
 }
-.nav .item a{
+.nav .nav-top-item a{
     height: 30px;
     display: inline-block;
     font-weight: bold;
@@ -34,7 +34,7 @@ a {
     border-radius: 15px;
 }
 
-.nav .item:hover a{
+.nav .nav-top-item:hover a{
     background-color: #FF0000;
     color: white;
 }

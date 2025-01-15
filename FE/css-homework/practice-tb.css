@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #424242;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.red-color {
+    color: red;
+}
+
+.top-nav {
+    height: 35px;
+    width: 1550px;
+    margin: 0 auto;
+    white-space: nowrap; /* 防止内容换行 */
+}
+
+.top-nav2 {
+    height: 72px;
+    width: 1550px;
+    margin: 0 auto;
+    white-space: nowrap; /* 防止内容换行 */
+    padding: 16px 70px 8px;
+}
+
+.top-nav-left {
+    float: left;
+}
+
+.top-nav-right {
+    float: right;
+}
+
+.nav-top-item {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    list-style: none;
+    margin: 0 0 0 7px;
+}
+
+.nav-top-item a {
+    font-size: 12px;
+}
+
+.nav-top-item img {
+    width: 10px;
+    vertical-align: -5px; /* 让图片与文字底部对齐 */
+    margin-left: 2px;
+}
+
+.ad-bar {
+    display: inline-block;
+    height: 60px;
+    width: 100%;
+    line-height: 35px;
+    background-image: url("https://bu.dusays.com/2025/01/15/6787d73bd459e.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /*border: 1px solid #000;*/
+}
+
+.logo-left {
+    float: left;
+    height: 72px;
+    width: 240px;
+    background-color: black;
+    background-image: url("https://bu.dusays.com/2025/01/16/6787dec8247d8.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.logo-right {
+    float: right;
+    height: 72px;
+    width: 240px;
+    background-color: black;
+    background-image: url("https://bu.dusays.com/2025/01/16/6787de9b33554.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.search-bar {
+
+}
+
+.search-bar-right {
+    white-space: nowrap;
+}
+
+.top-nav-list2 {
+    text-decoration: none;
+    list-style: none;
+    /*justify-content: center;*/
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.top-nav-list2 li {
+    border: 1px solid #000;
+    display: inline-block;
+    margin: 0 10px;
+    color: rgb(255, 0, 54);
+    font-weight: 600;
+}
