@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #424242;
+    font-family: arial, sans-serif; /* 采用经典的字体 */
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    list-style: none;    /* 去掉默认的列表符号 */
+}
+/* 清除掉浮动流 STYLES */
+.nav::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.nav li {
+    float: left;
+    margin: 0 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.nav .item a{
+    height: 30px;
+    display: inline-block;
+    font-weight: bold;
+    color: #FF0000;
+    padding : 0 5px; /* 给超链接设置内边距, 你自己盒子东西就变大了 */
+    border-radius: 15px;
+}
+
+.nav .item:hover a{
+    background-color: #FF0000;
+    color: white;
+}
