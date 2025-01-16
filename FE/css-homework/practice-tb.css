@@ -162,7 +162,7 @@ a {
     margin: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 3px;
 }
 
 .search-bar {
@@ -178,10 +178,10 @@ a {
 
 .search-input-wrapper {
     display: flex;
-    height: 38px;  /* 与搜同款按钮高度一致 */
+    height: 36px;
     border: 2px solid #ff4400;
     border-radius: 12px;
-    padding: 3px 3px;
+    padding: 2px 3px;
     overflow: hidden;
 }
 
@@ -198,12 +198,12 @@ a {
 }
 
 .search-submit {
-    width: 90px;
+    width: 82px;
     background-color: #ff4400;
     color: white;
     border: none;
     font-size: 18px;
-    font-weight: bold;
+    /* font-weight: bold; */
     cursor: pointer;
     transition: background-color 0.2s;
     border-radius: 8px;
@@ -215,14 +215,16 @@ a {
 }
 
 .search-links {
-    padding-top: 8px;
+    padding-top: 2px;
+    margin-left: 19px;
 }
 
 .search-links ul {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 12px;
     flex-wrap: wrap;
+    padding-left: 0;
 }
 
 .search-links li {
@@ -233,6 +235,7 @@ a {
     color: #666;
     text-decoration: none;
     font-size: 12px;
+    line-height: 1;
 }
 
 .search-links a.highlight {
@@ -258,8 +261,21 @@ a {
     align-items: center;
     gap: 4px;
     padding: 0 10px;
-    border-right: 1px solid #e5e5e5;
+    margin: 0 0 0 5px;
+    position: relative;
     cursor: pointer;
+}
+
+/* 删除原来的border-right，改用伪元素实现短分隔线 */
+.search-select::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 14px;
+    background-color: #e5e5e5;
 }
 
 .search-select span {
@@ -268,8 +284,8 @@ a {
 }
 
 .search-select .down-arrow {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     opacity: 0.6;
 }
 
