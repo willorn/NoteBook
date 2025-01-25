@@ -1,0 +1,48 @@
+.main-nav {
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-list {
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-list li a {
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-list li a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+}
+
+.nav-list li a:hover {
+    color: #ff4400;
+}
+
+
+/* 为特定导航项设置红色 */
+.main-nav .nav-list li:nth-child(-n+4) a {
+    color: #FF0036;
+}
+
+/* 为天猫超市设置绿色 */
+.main-nav .nav-list li:nth-child(5) a {
+    color: #33C900;
+}
